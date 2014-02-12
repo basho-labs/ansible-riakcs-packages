@@ -1,0 +1,3 @@
+---
+riakcs_ip_addr: "{{ hostvars[inventory_hostname]['ansible_' + riakcs_iface]['ipv4']['address'] }}"
+riakcs_patch_dir: "{{ riakcs_usr_lib }}/riak-cs/lib/basho-patches"

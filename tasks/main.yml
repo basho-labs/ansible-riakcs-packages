@@ -1,0 +1,23 @@
+---
+- name: Add the OS specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: copy custom riakcs package
+  copy: src={{ riakcs_custom_package }} dest=/tmp
+  when: riakcs_custom_package != False
+
+- name: set riakcs packagename
+  set_fact: riakcs_package=/tmp/{{ riakcs_custom_package|basename }} state=present
+  when: riakcs_custom_package != False
+
+- name: set riakcs_ee fact
+  set_fact: riakcs_ee=yes
+  when: riakcs_package.find('ee') != -1
+
+# CentOS specific package installations
+- include: RedHat.yml
+  when: ansible_os_family  == "RedHat"
+
+# Ubuntu specific package installations
+- include: Debian.yml
+  when: ansible_os_family  == "Debian"

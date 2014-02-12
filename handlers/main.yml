@@ -1,0 +1,3 @@
+---
+- name: restart riakcs
+  service: name=riak-cs state=restarted

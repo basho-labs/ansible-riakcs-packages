@@ -1,0 +1,1 @@
+riakcs_package: riak-cs={{ riakcs_version }}-{{ riakcs_package_release }}
