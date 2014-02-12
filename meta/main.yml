@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  author: James Martin
+  author: James Martin <jmartin@basho.com>
   description: Installs Riak CS packages. 
   company: Basho
   license: Apache
