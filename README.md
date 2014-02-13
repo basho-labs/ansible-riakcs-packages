@@ -6,12 +6,12 @@ This role will only install Riak CS packages onto a machine.  It could not be bu
 Requirements
 ------------
 
-None
+Tested on CentOS 6 and Ubuntu Precise.
 
 Role Variables
 --------------
 
-
+If you have trouble seeing the tables below, please [read the documentation on Github](https://github.com/basho/ansible-riakcs-packages/blob/master/README.md).
 
 
 | Name           | Default Value | Description                        |
