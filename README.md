@@ -16,7 +16,7 @@ If you have trouble seeing the tables below, please [read the documentation on G
 
 | Name           | Default Value | Description                        |
 | -------------- | ------------- | -----------------------------------|
-| riakcs_custom_package       | no            | path to a custom Riak CS package |
+| riakcs_custom_package       | no            | specify a path on the Ansible control, or HTTP URL, to a custom Riak CS package |
 | riakcs_package_release   | 1       | package release|
 | riakcs_version| 1.4.4       | Version of Riak CS to install |
 
