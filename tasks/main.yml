@@ -7,7 +7,7 @@
   when: riakcs_custom_package != False and riakcs_custom_package.find('http') == -1
 
 - name: copy custom riakcs package from remote
-  action: get_url url={{ riakcs_custom_package }} dest=/tmp/
+  action: get_url force=yes url={{ riakcs_custom_package }} dest=/tmp/
   when: riakcs_custom_package != False and riakcs_custom_package.find('http') != -1
 
 - name: set riakcs packagename
